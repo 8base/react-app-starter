@@ -1,0 +1,46 @@
+{
+  "name": "8base-react-app-starter",
+  "version": "1.0.0",
+  "dependencies": {
+    "@8base/api-token-auth-client": "^0.15.2",
+    "@8base/app-provider": "^0.15.2",
+    "@8base/auth": "^0.15.2",
+    "@8base/boost": "^0.14.7",
+    "@8base/forms": "^0.15.2",
+    "@8base/table-schema-provider": "^0.15.2",
+    "@8base/utils": "^0.15.2",
+    "@8base/web-auth0-auth-client": "^0.15.2",
+    "apollo-client": "^2.5.1",
+    "emotion": "^10.0.7",
+    "events": "^3.0.0",
+    "final-form": "^4.12.0",
+    "final-form-arrays": "^1.1.2",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.11",
+    "luxon": "^1.11.4",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "react": "^16.8.4",
+    "react-apollo": "^2.5.2",
+    "react-dom": "^16.8.4",
+    "react-emotion": "^10.0.0",
+    "react-final-form": "^4.1.0",
+    "react-final-form-arrays": "^2.0.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "recompose": "^0.30.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  },
+  "stackblitz": {
+    "template": "create-react-app"
+  }
+}
