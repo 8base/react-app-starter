@@ -8,11 +8,13 @@ import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
 
 import { Root } from './Root';
 
-const { REACT_APP_8BASE_API_ENDPOINT, REACT_APP_AUTH_CLIENT_ID, REACT_APP_AUTH_DOMAIN } = process.env;
+const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
+const APP_AUTH_CLIENT_ID = '__APP_AUTH_CLIENT_ID__';
+const APP_AUTH_DOMAIN = '__APP_AUTH_DOMAIN__';
 
 const auth0WebClient = new WebAuth0AuthClient({
-  domain: REACT_APP_AUTH_DOMAIN,
-  clientId: REACT_APP_AUTH_CLIENT_ID,
+  domain: APP_AUTH_DOMAIN,
+  clientId: APP_AUTH_CLIENT_ID,
   redirectUri: `${window.location.origin}/auth/callback`,
   logoutRedirectUri: `${window.location.origin}/auth`,
 });
@@ -41,7 +43,7 @@ class Application extends React.PureComponent {
       <BrowserRouter>
         <EightBaseBoostProvider>
           <EightBaseAppProvider
-            uri={REACT_APP_8BASE_API_ENDPOINT}
+            uri={APP_API_ENDPOINT}
             authClient={auth0WebClient}
             onRequestSuccess={this.onRequestSuccess}
             onRequestError={this.onRequestError}

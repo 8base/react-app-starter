@@ -13,7 +13,6 @@ export const Root = () => (
         <Nav.Plate color="BLUE" />
         <ContentPlate>
           <Switch>
-            <Redirect to="/" />
           </Switch>
         </ContentPlate>
       </MainPlate>
