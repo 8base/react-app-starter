@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { WebAuth0AuthClient } from '@8base/web-auth0-auth-client';
+import { ApiTokenAuthClient } from '@8base/api-token-auth-client';
 import { EightBaseAppProvider } from '@8base/app-provider';
 import { EightBaseBoostProvider, AsyncContent } from '@8base/boost';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +12,12 @@ import { Root } from './Root';
 const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
 const APP_AUTH_CLIENT_ID = '__APP_AUTH_CLIENT_ID__';
 const APP_AUTH_DOMAIN = '__APP_AUTH_DOMAIN__';
+const APP_API_TOKEN = '__APP_API_TOKEN__';
+
+
+const authClient = new ApiTokenAuthClient({
+  apiToken: APP_API_TOKEN,
+});
 
 const auth0WebClient = new WebAuth0AuthClient({
   domain: APP_AUTH_DOMAIN,
@@ -44,7 +51,7 @@ class Application extends React.PureComponent {
         <EightBaseBoostProvider>
           <EightBaseAppProvider
             uri={APP_API_ENDPOINT}
-            authClient={auth0WebClient}
+            authClient={authClient}
             onRequestSuccess={this.onRequestSuccess}
             onRequestError={this.onRequestError}
           >
