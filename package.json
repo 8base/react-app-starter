@@ -6,6 +6,7 @@
     "@8base/app-provider": "^0.16.0",
     "@8base/auth": "^0.16.0",
     "@8base/boost": "^0.14.7",
+    "@8base/file-input": "^0.16.0",
     "@8base/forms": "^0.16.0",
     "@8base/table-schema-provider": "^0.16.0",
     "@8base/utils": "^0.16.0",
@@ -32,7 +33,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "update-sdk": "npm i --save @8base/api-token-auth-client@latest @8base/app-provider@latest @8base/auth@latest @8base/forms@latest @8base/table-schema-provider@latest @8base/utils@latest @8base/web-auth0-auth-client@latest @8base/file-input@latest"
   },
   "devDependencies": {
     "react-scripts": "latest"
