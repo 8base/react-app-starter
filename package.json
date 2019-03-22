@@ -1,6 +1,13 @@
 {
   "name": "8base-react-app-starter",
   "version": "1.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "update-sdk": "npm i --save @8base/api-token-auth-client@latest @8base/app-provider@latest @8base/auth@latest @8base/forms@latest @8base/table-schema-provider@latest @8base/utils@latest @8base/web-auth0-auth-client@latest @8base/file-input@latest"
+  },
   "dependencies": {
     "@8base/api-token-auth-client": "^0.16.0",
     "@8base/app-provider": "^0.16.0",
@@ -29,17 +36,16 @@
     "react-toastify": "4.5.2",
     "recompose": "^0.30.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "update-sdk": "npm i --save @8base/api-token-auth-client@latest @8base/app-provider@latest @8base/auth@latest @8base/forms@latest @8base/table-schema-provider@latest @8base/utils@latest @8base/web-auth0-auth-client@latest @8base/file-input@latest"
-  },
   "devDependencies": {
     "react-scripts": "latest"
   },
   "stackblitz": {
     "template": "create-react-app"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

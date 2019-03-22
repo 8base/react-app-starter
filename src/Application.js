@@ -9,15 +9,18 @@ import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
 
 import { Root } from './Root';
 
+/** __AUTH_API_TOKEN_START__ */
+const APP_API_TOKEN = '__APP_API_TOKEN__';
+
+const authClient = new ApiTokenAuthClient({
+  apiToken: 'APP_API_TOKEN',
+});
+/** __AUTH_API_TOKEN_END__ */
+
+/** __AUTH_WEB_START__ */
 const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
 const APP_AUTH_CLIENT_ID = '__APP_AUTH_CLIENT_ID__';
 const APP_AUTH_DOMAIN = '__APP_AUTH_DOMAIN__';
-const APP_API_TOKEN = '__APP_API_TOKEN__';
-
-
-const authClient = new ApiTokenAuthClient({
-  apiToken: APP_API_TOKEN,
-});
 
 const auth0WebClient = new WebAuth0AuthClient({
   domain: APP_AUTH_DOMAIN,
@@ -25,6 +28,7 @@ const auth0WebClient = new WebAuth0AuthClient({
   redirectUri: `${window.location.origin}/auth/callback`,
   logoutRedirectUri: `${window.location.origin}/auth`,
 });
+/** __AUTH_WEB_END__ */
 
 class Application extends React.PureComponent {
   onRequestSuccess = ({ operation }) => {
