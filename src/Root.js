@@ -4,7 +4,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { ProtectedRoute } from './shared/components';
 import { MainPlate, ContentPlate, Nav } from './components';
 import { Auth } from './routes/auth';
-/** APP_PAGES_IMPORTS */
+/** __APP_PAGES_IMPORTS__ */
 
 export const Root = () => (
   <Switch>
@@ -12,11 +12,11 @@ export const Root = () => (
     <Route>
       <MainPlate>
         <Nav.Plate color="BLUE">
-          {/** APP_ROUTE_LINKS */}
+          {/** __APP_ROUTE_LINKS__ */}
         </Nav.Plate>
         <ContentPlate>
           <Switch>
-            {/** APP_ROUTES */}
+            {/** __APP_ROUTES__ */}
         </Switch>
         </ContentPlate>
       </MainPlate>
