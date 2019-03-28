@@ -9,7 +9,7 @@ import { Auth } from './routes/auth';
 export const Root = () => (
   <Switch>
     <Route path="/auth" component={Auth} />
-    <Route>
+    <ProtectedRoute>
       <MainPlate>
         <Nav.Plate color="BLUE">
           {/** __APP_ROUTE_LINKS__ */}
@@ -20,6 +20,6 @@ export const Root = () => (
         </Switch>
         </ContentPlate>
       </MainPlate>
-    </Route>
+    </ProtectedRoute>
   </Switch>
 );
