@@ -10,10 +10,8 @@ import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
 import { Root } from './Root';
 
 /** __AUTH_API_TOKEN_START__ */
-const APP_API_TOKEN = '__APP_API_TOKEN__';
-
 const authClient = new ApiTokenAuthClient({
-  apiToken: 'APP_API_TOKEN',
+  apiToken: '__APP_API_TOKEN__',
 });
 /** __AUTH_API_TOKEN_END__ */
 
