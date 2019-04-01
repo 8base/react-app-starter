@@ -9,6 +9,8 @@ import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
 
 import { Root } from './Root';
 
+const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
+
 /** __AUTH_API_TOKEN_START__ */
 const authClient = new ApiTokenAuthClient({
   apiToken: '__APP_API_TOKEN__',
@@ -16,13 +18,9 @@ const authClient = new ApiTokenAuthClient({
 /** __AUTH_API_TOKEN_END__ */
 
 /** __AUTH_WEB_START__ */
-const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
-const APP_AUTH_CLIENT_ID = '__APP_AUTH_CLIENT_ID__';
-const APP_AUTH_DOMAIN = '__APP_AUTH_DOMAIN__';
-
 const auth0WebClient = new WebAuth0AuthClient({
-  domain: APP_AUTH_DOMAIN,
-  clientId: APP_AUTH_CLIENT_ID,
+  domain: '__APP_AUTH_DOMAIN__',
+  clientId: '__APP_AUTH_CLIENT_ID__',
   redirectUri: `${window.location.origin}/auth/callback`,
   logoutRedirectUri: `${window.location.origin}/auth`,
 });
