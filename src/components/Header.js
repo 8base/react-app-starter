@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import { Grid } from '@8base/boost';
+import { Grid, Row } from '@8base/boost';
 
 import { UserDropdown } from './UserDropdown.js';
 import { Logo } from '../images/Logo';
@@ -17,13 +17,27 @@ const HeaderLogoTag = styled(Logo)({
   height: '3rem',
 });
 
+const HeaderTextTag = styled('span')({
+  fontSize: '2rem',
+  color: '#000',
+  fontWeight: '600',
+});
+
+const HeaderLinkTag = styled(Link)({
+  textDecoration: 'none',
+});
+
+
 const Header = () => (
   <Grid.Box area="header">
     <HeaderTag columns="1fr auto" gap="lg">
       <Grid.Box justifyContent="center">
-        <Link to="/">
-          <HeaderLogoTag alt="8base logo" />
-        </Link>
+        <HeaderLinkTag to="/">
+          <Row alignItems="center">
+            <HeaderLogoTag alt="8base logo" />
+            <HeaderTextTag>__APP_NAME__</HeaderTextTag>
+          </Row>
+        </HeaderLinkTag>
       </Grid.Box>
       <Grid.Box justifyContent="center">
         <UserDropdown />

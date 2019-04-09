@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { ProtectedRoute } from './shared/components';
 import { MainPlate, ContentPlate, Nav } from './components';
