@@ -16,7 +16,6 @@ const authClient = new ApiTokenAuthClient({
   apiToken: '__APP_API_TOKEN__',
 });
 /** __AUTH_API_TOKEN_END__ */
-
 /** __AUTH_WEB_START__ */
 const auth0WebClient = new WebAuth0AuthClient({
   domain: '__APP_AUTH_DOMAIN__',
