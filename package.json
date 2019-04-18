@@ -1,6 +1,6 @@
 {
   "name": "8base-react-app-starter",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
