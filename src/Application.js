@@ -17,7 +17,7 @@ const authClient = new ApiTokenAuthClient({
 });
 /** __AUTH_API_TOKEN_END__ */
 /** __AUTH_WEB_START__ */
-const auth0WebClient = new WebAuth0AuthClient({
+const authClient = new WebAuth0AuthClient({
   domain: '__APP_AUTH_DOMAIN__',
   clientId: '__APP_AUTH_CLIENT_ID__',
   redirectUri: `${window.location.origin}/auth/callback`,
