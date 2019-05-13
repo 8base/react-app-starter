@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import { Grid, Row } from '@8base/boost';
 
 import { UserDropdown } from './UserDropdown.js';
-import { Logo } from '../images/Logo';
+import logo from '../images/logo.svg';
 
 const HeaderTag = styled(Grid.Layout)({
   height: '6rem',
@@ -13,7 +13,7 @@ const HeaderTag = styled(Grid.Layout)({
   borderBottom: '1px solid #D0D7DD',
 });
 
-const HeaderLogoTag = styled(Logo)({
+const HeaderLogoTag = styled('img')({
   height: '3rem',
 });
 
@@ -34,8 +34,8 @@ const Header = () => (
       <Grid.Box justifyContent="center">
         <HeaderLinkTag to="/">
           <Row alignItems="center">
-            <HeaderLogoTag alt="8base logo" />
-            <HeaderTextTag>__APP_NAME__</HeaderTextTag>
+            <HeaderLogoTag src={logo} alt="8base logo" />
+            <HeaderTextTag>example</HeaderTextTag>
           </Row>
         </HeaderLinkTag>
       </Grid.Box>

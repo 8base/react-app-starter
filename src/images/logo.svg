@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <circle id="generic-app-logo-a" cx="15" cy="15" r="15"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="generic-app-logo-b" fill="#fff">
+      <use xlink:href="#generic-app-logo-a"/>
+    </mask>
+    <use fill="#D8D8D8" xlink:href="#generic-app-logo-a"/>
+    <g fill-rule="nonzero" mask="url(#generic-app-logo-b)">
+      <g transform="translate(-12.3 -15.75)">
+        <rect width="3.115" height="33.673" x="47.85" y="-2.775" fill="#00ADEA" transform="rotate(-39.9 49.408 14.062)"/>
+        <rect width="3.858" height="33.673" x="44.886" y="-.619" fill="#00B2E3" transform="rotate(-39.9 46.815 16.217)"/>
+        <rect width="4.601" height="33.673" x="41.921" y="1.537" fill="#00B6DD" transform="rotate(-39.9 44.222 18.374)"/>
+        <rect width="5.343" height="33.673" x="38.956" y="3.691" fill="#00BBD6" transform="rotate(-39.9 41.628 20.528)"/>
+        <rect width="6.085" height="33.673" x="35.992" y="5.847" fill="#00BFD0" transform="rotate(-39.9 39.035 22.684)"/>
+        <rect width="6.828" height="33.673" x="33.029" y="8.005" fill="#00C4C9" transform="rotate(-39.9 36.443 24.842)"/>
+        <rect width="7.571" height="33.673" x="30.065" y="10.161" fill="#00C8C2" transform="rotate(-39.9 33.85 26.998)"/>
+        <rect width="8.315" height="33.673" x="27.1" y="12.315" fill="#00CDBC" transform="rotate(-39.9 31.257 29.151)"/>
+        <rect width="9.057" height="33.673" x="24.135" y="14.471" fill="#00D1B5" transform="rotate(-39.9 28.663 31.308)"/>
+        <rect width="9.8" height="33.673" x="21.172" y="16.628" fill="#00D6AE" transform="rotate(-39.9 26.072 33.465)"/>
+        <rect width="10.542" height="33.673" x="18.207" y="18.784" fill="#00DAA8" transform="rotate(-39.9 23.478 35.62)"/>
+        <rect width="11.284" height="33.673" x="15.242" y="20.939" fill="#00DFA1" transform="rotate(-39.9 20.884 37.776)"/>
+        <rect width="12.027" height="33.673" x="12.278" y="23.095" fill="#00E39B" transform="rotate(-39.9 18.292 39.932)"/>
+        <rect width="12.77" height="33.673" x="9.316" y="25.252" fill="#00E894" transform="rotate(-39.9 15.7 42.089)"/>
+      </g>
+    </g>
+    <g fill="#FFF" fill-rule="nonzero" stroke="#FFF" stroke-width=".5" mask="url(#generic-app-logo-b)">
+      <g transform="translate(7.5 7.5)">
+        <rect width="5.181" height="5.03"/>
+        <rect width="5.181" height="5.03" y="9.968"/>
+        <rect width="5.181" height="5.03" x="9.675" y="9.968"/>
+        <rect width="5.181" height="5.03" x="9.675"/>
+      </g>
+    </g>
+  </g>
+</svg>

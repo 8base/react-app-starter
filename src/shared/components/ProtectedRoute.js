@@ -1,5 +1,4 @@
 import React from 'react';
-import * as R from 'ramda';
 import { Route, Redirect } from 'react-router-dom';
 import { withAuth } from '@8base/auth';
 
@@ -42,9 +41,9 @@ class ProtectedRoute extends React.Component {
   };
 
   render() {
-    const props = R.omit(['component', 'render'], this.props);
+    const { component, render, ...restProps } = this.props;
 
-    return <Route {...props} render={this.renderRoute} />;
+    return <Route {...restProps} render={this.renderRoute} />;
   }
 }
 

@@ -4,7 +4,6 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Dropdown, Menu, Avatar } from '@8base/boost';
 import { withLogout } from '@8base/auth';
-import * as R from 'ramda';
 
 const USER_QUERY = gql`
   query User {
@@ -23,6 +22,8 @@ const USER_QUERY = gql`
 
 class UserDropdown extends React.Component {
   renderContent = ({ data, loading }) => {
+    const { user = {} } = data;
+
     if (loading) {
       return null;
     }
@@ -31,8 +32,8 @@ class UserDropdown extends React.Component {
       <Dropdown defaultOpen={false}>
         <Dropdown.Head>
           <Avatar
-            src={R.path(['user', 'avatar', 'downloadUrl'], data)}
-            name={R.path(['user', 'firstName'], data)}
+            src={user.avatar && user.avatar.downloadUrl}
+            name={user.firstName}
             size="sm"
           />
         </Dropdown.Head>
