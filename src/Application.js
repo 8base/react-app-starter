@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { WebAuth0AuthClient } from '@8base/web-auth0-auth-client';
-import { ApiTokenAuthClient } from '@8base/api-token-auth-client';
-import { EightBaseAppProvider } from '@8base/app-provider';
+import { AppProvider } from '@8base/app-provider';
 import { EightBaseBoostProvider, AsyncContent } from '@8base/boost';
 import { ToastContainer, toast } from 'react-toastify';
 import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
@@ -11,19 +10,12 @@ import { Root } from './Root';
 
 const APP_API_ENDPOINT = '__APP_API_ENDPOINT__';
 
-/** __AUTH_API_TOKEN_START__ */
-const authClient = new ApiTokenAuthClient({
-  apiToken: '__APP_API_TOKEN__',
-});
-/** __AUTH_API_TOKEN_END__ */
-/** __AUTH_WEB_START__ */
 const authClient = new WebAuth0AuthClient({
   domain: '__APP_AUTH_DOMAIN__',
   clientId: '__APP_AUTH_CLIENT_ID__',
   redirectUri: `${window.location.origin}/auth/callback`,
   logoutRedirectUri: `${window.location.origin}/auth`,
 });
-/** __AUTH_WEB_END__ */
 
 class Application extends React.PureComponent {
   onRequestSuccess = ({ operation }) => {
@@ -48,7 +40,7 @@ class Application extends React.PureComponent {
     return (
       <BrowserRouter>
         <EightBaseBoostProvider>
-          <EightBaseAppProvider
+          <AppProvider
             uri={APP_API_ENDPOINT}
             authClient={authClient}
             onRequestSuccess={this.onRequestSuccess}
@@ -59,7 +51,7 @@ class Application extends React.PureComponent {
                 <Root />
               </AsyncContent>
             )}
-          </EightBaseAppProvider>
+          </AppProvider>
           <ToastContainer position={toast.POSITION.BOTTOM_LEFT} />
         </EightBaseBoostProvider>
       </BrowserRouter>

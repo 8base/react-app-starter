@@ -12,7 +12,7 @@
     "@8base/api-token-auth-client": "^0.30.0",
     "@8base/app-provider": "^0.30.0",
     "@8base/auth": "^0.30.0",
-    "@8base/boost": "^0.17.1",
+    "@8base/boost": "^0.22.0",
     "@8base/file-input": "^0.30.0",
     "@8base/forms": "^0.30.0",
     "@8base/table-schema-provider": "^0.30.0",
