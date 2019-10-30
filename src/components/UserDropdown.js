@@ -5,9 +5,9 @@ import gql from 'graphql-tag';
 import { Dropdown, Menu, Avatar } from '@8base/boost';
 import { withLogout } from '@8base/auth';
 
-const USER_QUERY = gql`
-  query User {
-    user {
+const TEAM_MEMBER_QUERY = gql`
+  query TeamMember {
+    teamMember {
       email
       firstName
       id
@@ -22,7 +22,7 @@ const USER_QUERY = gql`
 
 class UserDropdown extends React.Component {
   renderContent = ({ data, loading }) => {
-    const { user = {} } = data;
+    const { teamMember = {} } = data;
 
     if (loading) {
       return null;
@@ -32,8 +32,8 @@ class UserDropdown extends React.Component {
       <Dropdown defaultOpen={false}>
         <Dropdown.Head>
           <Avatar
-            src={user.avatar && user.avatar.downloadUrl}
-            name={user.firstName}
+            src={teamMember.avatar && teamMember.avatar.downloadUrl}
+            name={teamMember.firstName}
             size="sm"
           />
         </Dropdown.Head>
@@ -56,7 +56,7 @@ class UserDropdown extends React.Component {
   };
 
   render() {
-    return <Query query={USER_QUERY}>{this.renderContent}</Query>;
+    return <Query query={TEAM_MEMBER_QUERY}>{this.renderContent}</Query>;
   }
 }
 
